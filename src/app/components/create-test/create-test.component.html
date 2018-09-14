@@ -1,0 +1,23 @@
+<div class="main top-padding">
+  <div class="create">
+    <div class="form-group">
+      <label>Name</label>
+      <input class="form-control" type="text" name="name" [(ngModel)]="test.Name" [required]="isInvalid"/>
+    </div>
+    <div class="form-group">
+      <label>Description</label>
+      <textarea class="form-control" [(ngModel)]="test.Description" [required]="isInvalid"></textarea>
+    </div>
+    <div class="form-group">
+      <label>Test Time Limit</label>
+      <input class="form-control" type="time" [(ngModel)]="test.TestTimeLimit"  step="1" min="00:00:00" max="01:00:00" [required]="isInvalid" />
+    </div>
+    <div class="form-group">
+      <label>Question Time Limit</label>
+      <input class="form-control" type="time" [(ngModel)]="test.QuestionTimeLimit" step='1' min="00:00:00" max="00:05:00" [required]="isInvalid" />
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary" (click)="createTest()">Create Test</button>
+    </div>
+  </div>
+</div>

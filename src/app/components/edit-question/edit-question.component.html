@@ -1,0 +1,38 @@
+<div class="main top-padding">
+  <div class="edit">
+    <div class="form-group">
+      <label>Instance</label>
+      <input class="form-control" type="text" [(ngModel)]="question.Instance" placeholder="Instance" required>
+    </div>
+    <div class="form-group">
+      <label>Hint</label>
+      <input class="form-control" type="text" [(ngModel)]="question.Hint" placeholder="Hint" required>
+    </div>
+    <label>Answers</label>
+    <div style="padding-left: 2rem" *ngFor="let answer of question.Answers">
+      <div class="card">
+        <div class=card-body>
+          <div class="form-group">
+            <input class="form-control" type="text" [(ngModel)]="answer.Instance" placeholder="Instance">
+          </div>
+          <div class="form-check">
+            <label class="form-check-label" for="check">
+              <input class="form-check-input" id="check" type="checkbox" [(ngModel)]="answer.IsCorrect"> Is Correct?
+            </label>
+            <div class="text-right">
+             
+                <button class="btn btn-danger">Remove</button>
+          </div>
+          </div>
+           
+        </div>
+      </div>
+      <p></p>
+    </div>
+    <button class="btn" (click)="addAnswer()" style="margin-left:2rem" [disabled]="question.Answers.length>=4">Add
+      Answer</button>
+    <div class="form-group">
+      <button class="btn btn-primary" style="margin-top: 2rem" (click)="updateQuestion()">Update Question</button>
+    </div>
+  </div>
+</div>

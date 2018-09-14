@@ -1,0 +1,10 @@
+.main{
+    width: 80rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+.create{
+    padding: 4rem;
+    background-color: white;
+}

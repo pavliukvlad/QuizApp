@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+.top-padding{
+    padding-top: 2rem;
+}
+
+body{
+    background-color: #f3f3f3;
+}
+
+.ng-invalid{
+    border-color: red;
+}
+
+a{
+    cursor: pointer; 
+}

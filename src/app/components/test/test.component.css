@@ -1,0 +1,10 @@
+.tests{
+    background-color:white;
+    padding: 2rem;
+}
+
+.center-table{
+    width: 90rem;
+    margin: 0 auto;
+    position: relative;
+}

@@ -1,0 +1,22 @@
+.questions{
+    background-color:white;
+    padding: 2rem;
+}
+
+.center-table{
+    width: 90rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+.correct{
+    color: green;
+}
+
+.incorrect{
+    color: red;
+}
+
+.row-center{
+    vertical-align: middle;
+}

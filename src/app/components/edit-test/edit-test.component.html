@@ -1,0 +1,22 @@
+<div class="main top-padding">
+    <div class="edit" *ngIf="test">
+        <div class="form-group">
+          <label>Name</label>
+          <input class="form-control" type="text" [(ngModel)]="test.Name" required/>
+        </div>
+        <div class="form-group">
+          <label>Description</label>
+          <textarea class="form-control" [(ngModel)]="test.Description" required></textarea>
+        </div>
+        <div class="form-group">
+          <label>Test Time Limit</label>
+          <input class="form-control" type="time" [(ngModel)]="test.TestTimeLimit" step="1" required/>
+        </div>
+        <div class="form-group">
+          <label>Question Time Limit</label>
+          <input class="form-control" type="time" [(ngModel)]="test.QuestionTimeLimit" step="1" required/>
+        </div>
+        <button class="btn btn-primary" (click)="saveTest()">Save Test</button>
+      </div>
+      
+</div>

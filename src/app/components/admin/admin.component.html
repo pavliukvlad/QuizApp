@@ -1,0 +1,17 @@
+<div class="page-header">
+    <div class="navbar navbar-expand-sm bg-light navbar-light">
+        <a class="navbar-brand">Admin Page</a>
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" routerLink="tests">Tests</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li>
+                <a class="btn" (click)="signOut()">Sign Out</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

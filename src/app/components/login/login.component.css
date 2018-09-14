@@ -1,0 +1,10 @@
+.center-content{
+    position: relative;
+    margin: 0 auto;
+    width: 40rem;
+}
+
+.login{
+    padding: 2rem;
+    background-color: white;
+}

@@ -1,0 +1,50 @@
+<!-- <div class="container top-padding" *ngFor="let test of tests">
+  <div class="center">
+    <div class="card test">
+      <div class="card-body">
+        <h5 class="card-title">{{test.Name}}</h5>
+        <p class="card-text">{{test.Description}}</p>
+        <button class="btn btn-primary col-1">Edit</button>
+        <button class="btn btn-danger float-right">Delete</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="center-table top-padding">
+  <div class="tests">
+    <div>
+      <a class="btn btn-light" routerLink="/admin/create_test">Add new test</a>
+    </div>
+    <div class="top-padding" *ngIf="tests">
+      <table class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>TestTimeLimit</th>
+            <th>QuestionTimeLimit</th>
+            <th>Questions</th>
+            <th>IsValid</th>
+            <th>GUID</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let test of tests">
+            <td><a routerLink="/admin/edit_test/{{test.Guid}}">{{test.Name}}</a></td>
+            <td>{{test.Description}}</td>
+            <td>{{test.TestTimeLimit}}</td>
+            <td>{{test.QuestionTimeLimit}}</td>
+            <td><a routerLink="/admin/questions/{{test.Guid}}">Show Questions</a></td>
+            <td class="text-center">{{test.IsValid}}</td>
+            <td>{{test.Guid}}</td>
+            <td>
+              <button class="btn btn-danger" (click)="removeTest(test.Guid)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
